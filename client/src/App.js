@@ -12,7 +12,7 @@ import Signup from "./pages/Signup";
 import Error from "./pages/Error";
 import SingleExercise from "./components/SingleExercise"
 import Cardio from "./components/Cardio";
-import Resistance from "./components/Resistance";
+import Physical from "./components/Physical";
 
 
 function App() {
@@ -26,7 +26,7 @@ function App() {
         <Route path="/history/:type/:id" element={<SingleExercise />} />
         <Route path="/exercise" element={<Exercise />} />
         <Route path="/exercise/cardio" element={<Cardio />} />
-        <Route path="/exercise/physcial" element={<Resistance />} />
+        <Route path="/exercise/physcial" element={<Physical />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </Router >
