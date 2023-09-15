@@ -5,7 +5,7 @@ import 'react-datepicker/dist/react-datepicker.css';
 import Auth from '../utils/auth';
 import {createPhysical} from '../utils/API';
 import Header from '../components/Header';
-// import physicalIcon from '../assets/images/physicalIcon.png';
+import physicalIcon from '../assets/images/physical.png';
 
 export default function Physical()  {
     const [physicalForm, setPhysicalForm] = useState({
@@ -42,7 +42,7 @@ const handlePhysicalSubmit = async (event) => {
     event.preventDefault();
 
     // get token
-    cosnt token = loggedIn ? Auth.getToken() : null;
+    const token = loggedIn ? Auth.getToken() : null;
     if (!token) return false;
 
     // get user id
@@ -54,7 +54,7 @@ const handlePhysicalSubmit = async (event) => {
             // add userid to physical form
             physicalForm.userId = userId;
 
-            const response await createPhysical(physicalForm, token);
+            const response = await createPhysical(physicalForm, token);
 
             if (!response.ok) {
                 throw new Error('something went wrong!');
@@ -101,7 +101,7 @@ return (
                         value={physicalForm.sets} onChange={handlePhysicalChange} />
                     <label>Reps:</label>
                     <input type="number" name="reps" id="reps" placeholder="0"
-                        value={physcialForm.reps} onChange={handlePhysicalChange} />
+                        value={physicalForm.reps} onChange={handlePhysicalChange} />
                     <label >Date:</label>
                     <DatePicker selected={startDate} value={physicalForm.date} onChange={handleDateChange} placeholderText="mm/dd/yyyy" />
                     <button className='submit-btn' type="submit" disabled={!validateForm(physicalForm)} >Add</button>
