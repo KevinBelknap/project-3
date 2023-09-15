@@ -2,7 +2,7 @@ import React from "react";
 import {Navbar, Nav} from "react-bootstrap";
 import {Link, useLocation} from "react-router-dom";
 import Auth from "../utils/auth";
-//import heart from "../assets/images/heart.png";
+import fitness from "../assets/images/fitness.png";
 
 export default function Header() {
 
@@ -18,8 +18,8 @@ export default function Header() {
         {loggedIn ? (
           <>
             <Navbar.Brand as={Link} to="/" className="brand brand-logged d-flex align-items-center">
-              <img alt="heart" style={{ display: "inline" }} src={heart} className="heart-icon" />
-              FitTrack
+              <img alt="fitness" style={{ display: "inline" }} src={fitness} className="fitness-icon" />
+              Fitway
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
@@ -33,8 +33,8 @@ export default function Header() {
           </>) :
           (<Navbar.Brand as={Link} to="/" className={`brand brand-new mx-auto d-flex align-items-center
             ${isLoginPage || isSignupPage ? "brand-text" : null}`}>
-            <img alt="heart" style={{ display: "inline" }} src={heart} className="heart-icon" />
-            FitTrack
+            <img alt="fitness" style={{ display: "inline" }} src={fitness} className="fitness-icon" />
+            FITWAY
           </Navbar.Brand>)}
       </Navbar >
     );

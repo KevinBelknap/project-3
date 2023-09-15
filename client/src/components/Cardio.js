@@ -5,7 +5,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import Auth from "../utils/auth";
 import {createCardio} from "../utils/API";
 import Header from "./Header";
-import cardioIcon from "../assets/images/cardio-icon.png";
+import cardioIcon from "../assets/images/cardio.png";
 
 export default function Cardio() {
     const [cardioForm, setCardioForm] = useState({
