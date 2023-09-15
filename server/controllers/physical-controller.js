@@ -1,11 +1,11 @@
-const { physical, user } = require("../models");
+const { physical, User } = require("../models");
 
 module.exports = {
   // create physical
   createPhysical({ body }, res) {
     physical.create(body)
       .then((dbPhysicalData) => {
-        return user.findOneAndUpdate(
+        return User.findOneAndUpdate(
           { _id: body.userId },
           { $push: { physical: dbPhysicalData._id } },
           { new: true }

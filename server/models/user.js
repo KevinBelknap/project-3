@@ -1,7 +1,7 @@
 const { Schema, model } = require("mongoose");
 const bcrypt = require("bcrypt");
 
-const User = new Schema({
+const users = new Schema({
   username: {
     type: String,
     trim: true,
@@ -23,14 +23,14 @@ const User = new Schema({
     type: Schema.Types.ObjectId,
     ref: "Cardio"
   }],
-  physcial: [{
+  physical: [{
     type: Schema.Types.ObjectId,
     ref: "Physical"
   }]
 });
 
 // hash user password
-User.pre("save", async function (next) {
+users.pre("save", async function (next) {
   if (this.isNew || this.isModified("password")) {
     const saltRounds = 10;
     this.password = await bcrypt.hash(this.password, saltRounds);
@@ -40,10 +40,10 @@ User.pre("save", async function (next) {
 });
 
 // custom method to compare and validate password for logging in
-User.methods.isCorrectPassword = async function (password) {
+users.methods.isCorrectPassword = async function (password) {
   return bcrypt.compare(password, this.password);
 };
 
-const user = model("User", User);
+const User = model("User", users);
 
-module.exports = user;
+module.exports = User;

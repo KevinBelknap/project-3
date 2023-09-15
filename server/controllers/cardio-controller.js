@@ -1,11 +1,11 @@
-const { cardio, user } = require("../models");
+const { cardio, User } = require("../models");
 
 module.exports = {
   // create cardio
   createCardio({ body }, res) {
     cardio.create(body)
       .then((dbCardioData) => {
-        return user.findOneAndUpdate(
+        return User.findOneAndUpdate(
           { _id: body.userId },
           { $push: { cardio: dbCardioData._id } },
           { new: true }
@@ -40,7 +40,7 @@ module.exports = {
           res.status(404).json({ message: "No cardio data found with this id!" })
         }
         // remove cardio on user data
-        return user.findOneAndUpdate(
+        return User.findOneAndUpdate(
           { cardio: params.id },
           { $pull: { cardio: params.id } },
           { new: true }
