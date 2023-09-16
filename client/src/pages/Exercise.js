@@ -6,6 +6,7 @@ import cardioIcon from "../assets/images/cardio.png"
 import physicalIcon from "../assets/images/physical.png"
 
 
+
 export default function Exercise() {
   const loggedIn = Auth.loggedIn();
   const navigate = useNavigate()

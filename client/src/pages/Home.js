@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Auth from "../utils/auth"
 import Container from "react-bootstrap/Container";
 import Header from "../components/Header";
+import { Button } from "semantic-ui-react";
 
 export default function Home() {
   const navigate = useNavigate();
@@ -18,8 +19,8 @@ export default function Home() {
           with us.
         </p>
         {loggedIn ?
-          (<button className="home-btn" onClick={() => navigate("/exercise")}>Add Exercise</button>) :
-          (<button className="home-btn" onClick={() => navigate("/signup")}>Get Started</button>)}
+            (<Button primary className="home-btn" onClick={() => navigate("/exercise")}>Add Exercise</Button>) :
+            (<Button secondary className="home-btn" onClick={() => navigate("/signup")}>Get Started</Button>)}
       </Container>
     </div>
   );

@@ -17,6 +17,7 @@ import Physical from "./components/Physical";
 
 function App() {
   return (
+    
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
