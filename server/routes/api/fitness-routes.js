@@ -11,6 +11,18 @@ const {
   deleteCardio,
 } = require("../../controllers/cardio-controller");
 
+const {
+  createYoga,
+  getYogaById,
+  deleteYoga,
+} = require("../../controllers/yoga-controller");
+
+const {
+  createSwimming,
+  getSwimmingById,
+  deleteSwimming,
+} = require("../../controllers/swimming-controller");
+
 // import middleware
 const { authMiddleware } = require('../../utils/auth');
 
@@ -31,5 +43,17 @@ router.route("/physical").post(createPhysical);
 
 // /api/exercise/Physical/:id
 router.route("/physical/:id").get(getPhysicalById).delete(deletePhysical);
+
+// /api/exercise/yoga
+router.route("/yoga").post(createYoga);
+
+// /api/exercise/yoga/:id
+router.route("/yoga/:id").get(getYogaById).delete(deleteYoga);
+
+// /api/exercise/swimming
+router.route("/swimming").post(createSwimming);
+
+// /api/exercise/swimming/:id
+router.route("/Swimming/:id").get(getSwimmingById).delete(deleteSwimming);
 
 module.exports = router;

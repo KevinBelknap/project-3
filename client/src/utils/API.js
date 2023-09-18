@@ -35,6 +35,28 @@ export const getMe = (token) => {
       body: JSON.stringify(cardioData)
     })
   }
+
+  export const createYoga = (yogaData, token) => {
+    return fetch("/api/exercise/yoga", {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json',
+        authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify(yogaData)
+    })
+  }
+
+  export const createSwimming = (swimmingData, token) => {
+    return fetch("/api/exercise/swimming", {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json',
+        authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify(swimmingData)
+    })
+  }
   
   export const createPhysical = (physicalData, token) => {
     return fetch("/api/exercise/physical", {
@@ -55,6 +77,24 @@ export const getMe = (token) => {
       }
     })
   }
+
+  export const getYogaById = (yogaId, token) => {
+    return fetch(`/api/exercise/yoga/${yogaId}`, {
+      headers: {
+        'Content-Type': 'application/json',
+        authorization: `Bearer ${token}`,
+      }
+    })
+  }
+
+  export const getSwimmingById = (swimmingId, token) => {
+    return fetch(`/api/exercise/swimming/${swimmingId}`, {
+      headers: {
+        'Content-Type': 'application/json',
+        authorization: `Bearer ${token}`,
+      }
+    })
+  }
   
   export const getPhysicalById = (physicalId, token) => {
     return fetch(`/api/exercise/physical/${physicalId}`, {
@@ -67,6 +107,24 @@ export const getMe = (token) => {
   
   export const deleteCardio = (cardioId, token) => {
     return fetch(`/api/exercise/cardio/${cardioId}`, {
+      method: "DELETE",
+      headers: {
+        authorization: `Bearer ${token}`,
+      }
+    })
+  }
+
+  export const deleteYoga = (yogaId, token) => {
+    return fetch(`/api/exercise/yoga/${yogaId}`, {
+      method: "DELETE",
+      headers: {
+        authorization: `Bearer ${token}`,
+      }
+    })
+  }
+
+  export const deleteSwimming = (swimmingId, token) => {
+    return fetch(`/api/exercise/swimming/${swimmingId}`, {
       method: "DELETE",
       headers: {
         authorization: `Bearer ${token}`,
