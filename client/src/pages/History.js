@@ -147,6 +147,9 @@ export default function History() {
                           <p className="history-index">
                             {exercise.lapsCount} laps{" "}
                           </p>
+                          <p className="history-index">
+                            {exercise.duration} minutes{" "}
+                          </p>
                         </div>
                       </div>
                     ) : (
