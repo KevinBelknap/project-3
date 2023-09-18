@@ -26,6 +26,14 @@ const users = new Schema({
   physical: [{
     type: Schema.Types.ObjectId,
     ref: "Physical"
+  }],
+  yoga: [{
+    type: Schema.Types.ObjectId,
+    ref: "Yoga"
+  }],
+  swimming: [{
+    type: Schema.Types.ObjectId,
+    ref: "Swimming"
   }]
 });
 

@@ -4,6 +4,8 @@ import Auth from "../utils/auth";
 import Header from "../components/Header";
 import cardioIcon from "../assets/images/cardio.png"
 import physicalIcon from "../assets/images/physical.png"
+import yogaIcon from "../assets/images/yoga.png"
+import swimmingIcon from "../assets/images/swimming.png"
 
 
 export default function Exercise() {
@@ -28,9 +30,21 @@ export default function Exercise() {
           </button>
         </div>
         <div>
-          <button className='resistance-btn d-flex flex-column  align-items-center justify-content-center' onClick={() => navigate("/exercise/resistance")}>
-            <img alt="resistance" src={physicalIcon} className="exercise-icon" />
-            Resistance
+          <button className='physical-btn d-flex flex-column  align-items-center justify-content-center' onClick={() => navigate("/exercise/physical")}>
+            <img alt="physical" src={physicalIcon} className="exercise-icon" />
+            Physical
+          </button>
+        </div>
+        <div>
+          <button className='yoga-btn d-flex flex-column  align-items-center justify-content-center' onClick={() => navigate("/exercise/yoga")}>
+            <img alt="yoga" src={yogaIcon} className="exercise-icon" />
+            Yoga
+          </button>
+        </div>
+        <div>
+          <button className='swimming-btn d-flex flex-column  align-items-center justify-content-center' onClick={() => navigate("/exercise/swimming")}>
+            <img alt="swimming" src={swimmingIcon} className="exercise-icon" />
+            Swimming
           </button>
         </div>
       </div>

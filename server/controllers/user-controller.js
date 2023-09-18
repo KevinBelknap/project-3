@@ -10,6 +10,9 @@ module.exports = {
       .select("-__v")
       .populate("cardio")
       .populate("physical")
+      .populate("yoga")
+      .populate("swimming")
+
 
     if (!foundUser) {
       return res.status(400).json({ message: 'Cannot find a user with this id!' });
