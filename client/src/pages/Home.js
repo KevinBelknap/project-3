@@ -15,11 +15,11 @@ export default function Home() {
         <h1 className="home-title">Your Daily Workout Partner</h1>
         <p className="home-text">
           Cardio? Physical? Or both? Track your daily exercises and stay fit
-          with us.
+          with us
         </p>
         {loggedIn ?
           (<button className="home-btn" onClick={() => navigate("/exercise")}>Add Exercise</button>) :
-          (<button className="home-btn" onClick={() => navigate("/signup")}>Get Started</button>)}
+          (<button className="home-btn" style={{backgroundColor: 'gold'}} onClick={() => navigate("/signup")}>Get Started</button>)}
       </Container>
     </div>
   );

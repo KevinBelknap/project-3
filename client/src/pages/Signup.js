@@ -63,11 +63,11 @@ export default function Signup() {
 
     <div className="signup d-flex flex-column align-items-center justify-content-center text-center">
       <Header />
-      <form onSubmit={handleFormSubmit} className="signup-form d-flex flex-column">
+      <form onSubmit={handleFormSubmit} className="signup-form d-flex flex-column" style={{color: 'gold', fontWeight: 'bold'}}>
         {/* --------------------username-------------------- */}
         <label htmlFor="username">Username</label>
         <input
-          className="form-input"
+          className="form-input my-2"
           value={formState.username}
           placeholder="Your username"
           name="username"
@@ -78,7 +78,7 @@ export default function Signup() {
         {/* --------------------email-------------------- */}
         <label htmlFor="email">Email</label>
         <input
-          className="form-input"
+          className="form-input my-2"
           value={formState.email}
           placeholder="youremail@gmail.com"
           name="email"
@@ -89,7 +89,7 @@ export default function Signup() {
         {/* -------------------- password-------------------- */}
         <label htmlFor="password">Password</label>
         <input
-          className="form-input"
+          className="form-input my-2"
           value={formState.password}
           placeholder="********"
           name="password"
@@ -98,14 +98,14 @@ export default function Signup() {
         />
 
         {/* --------------------sign up btn-------------------- */}
-        <div className="btn-div">
+        <div className="btn-div mt-2">
           <button disabled={!(formState.username && formState.email && formState.password)}
-            className="signup-btn mx-auto my-auto"
+            className="signup-btn mx-auto my-auto text-dark" style={{backgroundColor: 'gold'}}
           >Sign Up</button>
         </div>
 
         {/* --------------------login link-------------------- */}
-        <p className="link-btn">
+        <p className="link-btn my-2">
           Already have an account?{' '}
           <Link to="/login">Log in</Link>
         </p>

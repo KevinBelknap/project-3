@@ -54,13 +54,13 @@ export default function Login() {
   }
 
   return (
-    <div className="signup d-flex flex-column align-items-center justify-content-center text-center">
+    <div className="signup d-flex flex-column align-items-center justify-content-center text-center" style={{color: 'gold', fontWeight: 'bold'}}>
       <Header />
       <form onSubmit={handleFormSubmit} className="signup-form d-flex flex-column">
         {/* --------------------email-------------------- */}
         <label htmlFor="email">Email</label>
         <input
-          className="form-input"
+          className="form-input my-2"
           value={formState.email}
           placeholder="youremail@gmail.com"
           name="email"
@@ -71,7 +71,7 @@ export default function Login() {
         {/* -------------------- password-------------------- */}
         <label htmlFor="password">Password</label>
         <input
-          className="form-input"
+          className="form-input my-2"
           value={formState.password}
           placeholder="********"
           name="password"
@@ -80,12 +80,12 @@ export default function Login() {
         />
 
         {/* --------------------login btn-------------------- */}
-        <div className="btn-div">
+        <div className="btn-div mt-2">
           <button disabled={!(formState.email && formState.password)}
-            className="signup-btn mx-auto my-auto">Login</button>
+            className="signup-btn mx-auto my-auto text-dark" style={{backgroundColor: 'gold'}}>Login</button>
         </div>
         {/* --------------------signup link-------------------- */}
-        <p className="link-btn">
+        <p className="link-btn my-2">
           New to Fitway?{' '}
           <Link to="/signup" >Create one</Link>
         </p>
