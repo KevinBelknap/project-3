@@ -13,6 +13,8 @@ import Error from "./pages/Error";
 import SingleExercise from "./components/SingleExercise"
 import Cardio from "./components/Cardio";
 import Physical from "./components/Physical";
+import Swimming from "./components/Swimming";
+import Yoga from "./components/Yoga";
 
 
 function App() {
@@ -26,7 +28,9 @@ function App() {
         <Route path="/history/:type/:id" element={<SingleExercise />} />
         <Route path="/exercise" element={<Exercise />} />
         <Route path="/exercise/cardio" element={<Cardio />} />
-        <Route path="/exercise/physcial" element={<Physical />} />
+        <Route path="/exercise/physical" element={<Physical />} />
+        <Route path="/exercise/yoga" element={<Yoga />} />
+        <Route path="/exercise/swimming" element={<Swimming />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </Router >
