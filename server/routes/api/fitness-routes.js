@@ -54,6 +54,6 @@ router.route("/yoga/:id").get(getYogaById).delete(deleteYoga);
 router.route("/swimming").post(createSwimming);
 
 // /api/exercise/swimming/:id
-router.route("/Swimming/:id").get(getSwimmingById).delete(deleteSwimming);
+router.route("/swimming/:id").get(getSwimmingById).delete(deleteSwimming);
 
 module.exports = router;
