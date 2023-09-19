@@ -13,6 +13,78 @@ code {
     monospace;
 }
 
+img {
+  width: 175px;
+}
+
+.history-index, p{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  
+}
+
+.date {
+  padding-right: 25px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 25px;
+}
+
+.history-stats{
+ padding-left: 25px;
+}
+
+.history-div {
+  margin-bottom: 50px;
+}
+
+.history-card div{
+  margin-left: 15px;
+}
+
+.swimming-div div{
+  padding-bottom: 40px;
+}
+
+.history-data {
+  padding-top: 40px;
+}
+
+img {
+  width: 175px;
+}
+
+.history-index, p{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  
+}
+
+.date {
+  padding-right: 25px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 25px;
+}
+
+.history-stats{
+ padding-left: 25px;
+}
+
+.history-div {
+  margin-bottom: 50px;
+}
+
+.history-card div{
+  margin-left: 15px;
+}
+
+.swimming-div div{
+  padding-bottom: 40px;
+}
+
+.history-data {
+  padding-top: 40px;
+}
+
 .cardio-btn, .physical-btn, .yoga-btn, .swimming-btn {
   background-color: rgb(212,175,55);
   color: black;

@@ -9,7 +9,6 @@ import physicalIcon from "../assets/images/physical.png";
 import swimmingIcon from "../assets/images/swimming.png";
 import yogaIcon from "../assets/images/yoga.png";
 
-
 export default function History() {
   const [userData, setUserData] = useState({});
   const [exerciseData, setExerciseData] = useState([]);
@@ -125,12 +124,8 @@ export default function History() {
                           <p className="history-index">
                             {exercise.weight} pounds{" "}
                           </p>
-                          <p className="history-index">
-                            {exercise.sets} sets{" "}
-                          </p>
-                          <p className="history-index">
-                            {exercise.reps} reps{" "}
-                          </p>
+                          <p className="history-index">{exercise.sets} sets </p>
+                          <p className="history-index">{exercise.reps} reps </p>
                         </div>
                       </div>
                     ) : exercise.type === "swimming" ? (
