@@ -49,8 +49,8 @@ export default function SingleExercise() {
         className = "single-swimming";
         break;
 
-      default: 
-      className="null";  
+      default:
+        className = "null";
     }
     return className;
   };
@@ -135,7 +135,7 @@ export default function SingleExercise() {
 
     confirmAlert({
       title: "Confirm to delete",
-      message: "Are you sure you want to delete this exercise?",
+      message: "Do you want to delete this exercise?",
       buttons: [
         {
           label: "Yes",

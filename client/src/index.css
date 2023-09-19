@@ -1,4 +1,5 @@
-body {
+html, body {
+  height: 100%;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +11,78 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.cardio-btn, .physical-btn, .yoga-btn, .swimming-btn {
+  background-color: rgb(212,175,55);
+  color: black;
+  border-radius:10px;
+  box-shadow: 0px 0px 2px 2px rgb(0,0,0);
+  transition-duration: 0.5s;
+
+}
+
+.cardio-btn:hover, .physical-btn:hover, .yoga-btn:hover, .swimming-btn:hover{
+  background-color: rgb(183,65,14);
+}
+
+img {
+  width: 175px;
+  display: flex;
+}
+
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 33.33%;
+  padding: 5px;
+}
+
+input{
+  
+  display:inline-block;
+  height:34px;
+  margin:30px;
+  vertical-align:middle;
+  bottom:14px;
+  right:9px;
+  border-radius:22px;
+  width:220px;
+  box-sizing:border-box;
+  padding:0 18px; 
+}
+
+
+
+.submit-btn{
+  margin: 10px 10px 10px 10px;
+  background:rgb(212,175,55) ! important;
+  color:#fff;
+  position:relative;
+  left:9px;
+  top:25px; 
+  width:200px;
+  cursor:pointer;
+  border-radius:22px;
+
+}
+
+.homepage {
+  background-image: url("./assets/images/background1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* 100% of the viewport height */
+}
+
+
+.exercise {
+  background-image: url("./assets/images/background2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* 100% of the viewport height */
 }
