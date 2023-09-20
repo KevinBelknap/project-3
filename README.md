@@ -13,6 +13,22 @@ Are you looking for a super easy way to plan your daily workout? With FitWay, yo
 Wegiht lfting, Swimming, Cardio you name it. you'll be able to use FitWay to schedule weeks of your personal workout of your 
 choosing.
 
+# Technology Used
+React
+Javascript
+HTML
+CSS
+MongoDB
+Node.js
+Express.js
+JWT
+GraphQL
+
+
+# Github Repo
+
+https://github.com/jxhudson/fitway
+
 Sign up a Join today!!
 
 ![Screenshot 2023-09-19 182023](https://github.com/jxhudson/fitway/assets/129125608/d22148fb-d887-48cc-a35b-d8f7104f7e00)
